@@ -9,7 +9,7 @@ const override: CSSProperties = {
 
 const Loading = () => {
   return (
-    <div>
+    <div className="mt-16">
       <HashLoader
         cssOverride={override}
         size={50}

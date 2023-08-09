@@ -42,7 +42,7 @@ const Render: React.FC = () => {
     <>
       {!loader
         ? <Loading />
-        : <main className="container w-full">
+        : <main className="container w-full mt-5">
           <h1 className="italic text-xl font-bold text-center">Event list</h1>
           <div className="m-4">
 
