@@ -62,20 +62,18 @@ const Render: React.FC = () => {
                         <span className="italic font-semibold text-md">More details</span>
                       </button>
                       : <section className="transition-all duration-500 ease-in-out">
-                          <button onClick={() => { setOpen(!open) }}>
-                            <span className="italic font-semibold text-md">Show less</span>
-                          </button>
-                          <h3>Event date: {event.timestamp}</h3>
-                          <div className="">
-                            <p>Event labels and classes:</p>
-                            <div className="flex gap-2">
-                              <p>{event.target.tagName}</p>
-                              <p>{event.target.className}</p>
-                              <p>{event.scriptUrl}</p>
-                              <p>{event.user}</p>
-                            </div>
-                          </div>
-                        </section>
+                        <button onClick={() => { setOpen(!open) }}>
+                          <span className="italic font-semibold text-md">Show less</span>
+                        </button>
+                        <h3>Event date: {event.timestamp}</h3>
+                        <p>URL: {event.scriptUrl}</p>
+                        <p>Username: {event.user}</p>
+                        <div className="">
+                          <p>Event labels and classes:</p>
+                          <p>{event.target.tagName}</p>
+                          <p>{event.target.className}</p>
+                        </div>
+                      </section>
                     }
                   </ul>
                 </li>
