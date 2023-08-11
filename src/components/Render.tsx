@@ -12,6 +12,9 @@ interface Event {
   };
   timestamp: string;
   type: string;
+  scriptUrl: string;
+  user: string;
+  ip: string;
   // Otras propiedades relevantes
 }
 
@@ -51,6 +54,7 @@ const Render: React.FC = () => {
                 <li className="p-2 border border-black rounded shadow-md" key={event.id}>
                   <h2 className="overflow-auto ">Event ID: {event.id}</h2>
                   <p>Event type: {event.type}</p>
+                  <p>IP: {event.ip}</p>
 
                   <ul>
                     {!open
@@ -67,6 +71,8 @@ const Render: React.FC = () => {
                             <div className="flex gap-2">
                               <p>{event.target.tagName}</p>
                               <p>{event.target.className}</p>
+                              <p>{event.scriptUrl}</p>
+                              <p>{event.user}</p>
                             </div>
                           </div>
                         </section>
